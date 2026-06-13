@@ -1,0 +1,80 @@
+h1{
+ color:indigo;
+ text-align: center;
+}
+
+h2{
+ color:green;
+}
+p{
+ color:charcoal;
+}
+
+#skill{
+ text-decoration: underline;
+}
+
+.project-titles{
+ text-decoration: underline;
+}
+#color{
+    color: brown;
+}
+
+
+.project{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+
+body{
+ padding:20px;
+ background-color: skyblue;
+}
+
+section ul li{
+ border: 2px solid black;
+ padding: 20px;
+ margin-bottom: 20px;
+}
+
+section ol{
+ border: 2px solid black;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+.container{
+ display:flex;
+ padding-left: 20px;
+ justify-content: space-around;
+ flex-direction: column;
+}
+
+#navbar{
+ display:flex;
+ padding-left: 20px;
+ justify-content: space-around;
+ list-style: none;
+ background-color: black;
+ color: bisque;
+ padding: 20px;
+ border-radius: 10px;e
+}
+
+ .grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ }
+
+
+@media(max-width:768px)
+{
+ .grid{
+  display:grid;
+  grid-template-columns:  1fr;
+ }
+}
