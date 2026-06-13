@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ 
+ <head>
+  <title>College Fest Registration</title>
+ </head>
+
+ <body>
+  <header>
+   <h1> Techfest 2026</h1>
+  </header>
+
+  <main>
+   
+   <section>
+    <h2>About Event</h2>
+    <p id="paragraph"> Techfest 2026 is a college events where students can participate</p>
+   </section>
+
+   <section>
+    <h2>Event Schedule</h2>
+    <ol>
+     <li>Coding Hackathon - 9:30AM</li>
+     <li>DSA Challenge - 11:30AM</li>
+     <li> Web Development Challenge - 4:30PM</li>
+    </ol>
+   </section>
+
+   <section>
+    <h2>Rules</h2>
+    <ul>
+     <li> Participant must be of lega age</li>
+     <li> Should not indulge in unethical practices</li>
+    </ul>
+   </section>
+
+   <section>
+    <h2>Registration Form</h2>
+    <form>
+
+     <label>Name:</label>
+     <input type="text" id="name">
+     <br><br>
+
+     <label>Email:</label>
+     <input type="email" id="email">
+     <br><br>
+
+     <label>Phone Number:</label>
+     <input type="tel" id="phone_number">
+     <br><br>
+      
+     <button type="button" onclick="hideemail()">Hide Email</button>
+
+     <button type="button" onclick="processform()">Register</button>
+    </form>
+    <h1 id="count">0 participants have registered till now.</h1>
+   </section>
+  </main>
+  <footer>
+   <p>
+    Contact: techfestofficial@gmail.com
+   </p>
+  </footer>
+  <script src="domscript2.js"></script>
+ </body>
+</html>
