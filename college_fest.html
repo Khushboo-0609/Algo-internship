@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ 
+ <head>
+  <title>College Fest 2026</title>
+  
+ </head>
+
+ <body>
+  <header>
+   <h1> College fest 2026</h1>
+   <p>Welcome to Annual College Fest </p>
+  </header>
+
+  <main>
+   
+   <section>
+    <h2>About Event</h2>
+    <p>our college fest brings together students for technical , cultural and fun activities</p>
+   </section>
+
+   <section>
+    <h2>Event Schedule</h2>
+    <ol>
+     <li>09:00AM - Open Ceremony</li>
+     <li>10:00AM - Coding Competition</li>
+     <li>12:00PM - Quiz Competition</li>
+     <li>01:00PM - Lunch Break</li>
+     <li>02:00PM - Cultural Event</li>
+     <li>05:00PM - Prize Distribution</li>
+    </ol>
+   </section>
+
+   <section>
+    <h2>Rules</h2>
+    <ul>
+     <li>Carry your college ID card</li>
+     <li>Maintain discipline during thhe event. </li>
+     <li>Regustration is mandatory.</li>
+     
+    </ul>
+   </section>
+
+   <section>
+   // Register Form Validation
+
+document.getElementById("registerForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let password =
+    document.getElementById("password").value;
+
+    let confirmPassword =
+    document.getElementById("confirmPassword").value;
+
+    let message =
+    document.getElementById("message");
+
+    if(password !== confirmPassword){
+        message.innerHTML = "Passwords do not match";
+        message.style.color = "red";
+    }
+    else{
+        message.innerHTML = "Registration Successful";
+        message.style.color = "green";
+    }
+});
+
+
+// Weather App
+
+async function getWeather(){
+
+    let city =
+    document.getElementById("city").value;
+
+    let apiKey = "YOUR_API_KEY";
+
+    let url =
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    try{
+
+        let response = await fetch(url);
+        let data = await response.json();
+
+        document.getElementById("result").innerHTML =
+        `${data.name} : ${data.main.temp} °C`;
+
+    }
+    catch(error){
+        document.getElementById("result").innerHTML =
+        "City Not Found";
+    }
+}
+   </section>
+  </main>
+  <footer>
+   <p>
+    Contact: techfestofficial@gmail.com
+   </p>
+  </footer>
+
+ </body>
+</htmlbe
+>
