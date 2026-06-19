@@ -1,11 +1,16 @@
 {
-  "name": "hospital-management-system",
-  "version": "1.0.0",
-  "description": "Hospital Management Mini Project",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
+  "dependencies": {
+    "express": "^5.2.1"
   },
-  "author": "Khushboo",
-  "license": "ISC"
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
