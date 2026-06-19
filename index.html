@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Student Registry</title>
+ <title>Weather App</title>
+ <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Student Registration Form</h1>
-    <form action="/register" method="POST">
-        <label>Student Name</label>
-        <input type ="text" name="studentName">
-        <br><br>
-        <label>Roll No</label>
-        <input type="number" name="rollno">
-        <br><br>
-        <button type="submit">Register Student</button>
-    </form>
-    <br><br>
-    <a href="/students">View Registered Students</a>
+
+<body background="c:\Users\A\Pictures\whats app\WhatsApp Image 2026-06-17 at 7.21.17 PM.jpeg">
+ <div class="container">
+  <h1 id="main_heading">Weather App</h1>
+  <select id="cityDropdown">
+   <option value="">
+    Select City
+   </option>
+   <option value="Kolkata">
+    Kolkata
+   </option>
+   <option value="Bengaluru">
+    Bengaluru
+   </option>
+   <option value="Delhi">
+    Delhi
+   </option>
+   <option value="Mumbai">
+    Mumbai
+   </option>
+   <option value="Chennai">
+    Chennai
+   </option>
+  </select>
+
+  <button onclick="getWeather()">Get Weather</button>
+  <button onclick="toggleUnit()">
+   Toggle °C / °F
+  </button>
+
+  <div id="weatherResult"></div>
+ </div>
+
+ <script src="script.js"></script>
 </body>
+
 </html>
+
 
 
