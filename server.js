@@ -1,26 +1,44 @@
+const mongoose = require("mongoose");
 const express = require("express");
+
 const app = express();
+
+mongoose.connect("mongodb+srv://ks2656181_db_user:khushboo26@cluster0.zhb8wd6.mongodb.net/student")
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
 
 app.use(express.json());
 app.use(express.static("public"));
 
-let notes = [];
-let nextId = 1;
+
+app.use(express.json());
+app.use(express.static("public"));
+mongoose.connect("mongodb://127.0.0.1:27017/studentNotesDB")
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
+
+const noteSchema = new mongoose.Schema({
+    name: String,
+    course: String,
+    date: String,
+    note: String
+});
+
+const Note = mongoose.model("Note", noteSchema);
 
 // Add Note
-app.post("/notes", (req, res) => {
+app.post("/notes", async (req, res) => {
 
     const { name, course, date, note } = req.body;
 
-    const newNote = {
-        id: nextId++,
+    const newNote = new Note({
         name,
         course,
         date,
         note
-    };
+    });
 
-    notes.push(newNote);
+    await newNote.save();
 
     res.status(201).json(newNote);
 });
@@ -28,17 +46,13 @@ app.post("/notes", (req, res) => {
 
 
 // Get All Notes
-app.get("/notes", (req, res) => {
+app.get("/notes", async (req, res) => {
+    const notes = await Note.find();
     res.json(notes);
 });
 
-app.delete("/notes/:id", (req, res) => {
-
-    const id = parseInt(req.params.id);
-
-    notes = notes.filter(note => note.id !== id);
-
-    console.log("Remaining Notes:", notes);
+app.delete("/notes/:id", async (req, res) => {
+    await Note.findByIdAndDelete(req.params.id);
 
     res.json({
         success: true
