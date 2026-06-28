@@ -3,7 +3,7 @@ const express = require("express");
 
 const app = express();
 
-mongoose.connect("mongodb+srv://ks2656181_db_user:khushboo26@cluster0.zhb8wd6.mongodb.net/student")
+mongoose.connect("mongodb+srv://_db_user:@cluster0.zhb8wd6.mongodb.net/student")
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
