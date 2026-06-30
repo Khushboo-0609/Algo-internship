@@ -1,17 +1,16 @@
 {
-  "name": "notes-project",
+  "name": "hospital-management-system",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hospital Management Mini Project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Khushboo",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1"
+    "mongob": "^1.0.0",
+    "mongodb": "^7.4.0",
+    "mongoose": "^9.7.3"
   }
 }

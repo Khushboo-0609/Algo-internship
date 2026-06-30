@@ -1,47 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
- <title>Weather App</title>
- <link rel="stylesheet" href="style.css">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body background="c:\Users\A\Pictures\whats app\WhatsApp Image 2026-06-17 at 7.21.17 PM.jpeg">
- <div class="container">
-  <h1 id="main_heading">Weather App</h1>
-  <select id="cityDropdown">
-   <option value="">
-    Select City
-   </option>
-   <option value="Kolkata">
-    Kolkata
-   </option>
-   <option value="Bengaluru">
-    Bengaluru
-   </option>
-   <option value="Delhi">
-    Delhi
-   </option>
-   <option value="Mumbai">
-    Mumbai
-   </option>
-   <option value="Chennai">
-    Chennai
-   </option>
-  </select>
+    <h1>Patient Registration Form</h1>
+    <div style="text-align: center;">
+    <img src="images.jpeg" width="700px" height="400px">
+    </div>
+   <form action="/register" method="GET">
+        <label><h4>Patient Name:</h4></label><br>
+        <input type="text" name="name" required>
+        <br><br>
+        <label><h4>Age:</h4></label><br>
+        <input type="number" name="age" required>
+        <br><br>
 
-  <button onclick="getWeather()">Get Weather</button>
-  <button onclick="toggleUnit()">
-   Toggle °C / °F
-  </button>
+        <label><h4>Disease:</h4></label><br>
+        <input type="text" name="disease" required>
+        <br><br>
 
-  <div id="weatherResult"></div>
- </div>
+        <label><h4>Admit Date:</h4></label><br>
+        <input type="date" name="date" required>
+        <br><br>
 
- <script src="script.js"></script>
+        <button type="submit">Register Patient</button>
+    </form>
+
+    <br>
+    <a href="/view">View All Patients</a>
+
 </body>
-
 </html>
-
-
 
